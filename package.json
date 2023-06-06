@@ -1,0 +1,28 @@
+{
+  "name": "book-my-stay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.4.2",
+    "mysql2": "^3.3.3",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "nodemon": "^2.0.22"
+  }
+}
