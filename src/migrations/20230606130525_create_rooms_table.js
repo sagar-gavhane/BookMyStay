@@ -12,7 +12,9 @@ exports.up = function (knex) {
     table.integer('price_per_night', 2);
     table.boolean('is_available').defaultTo(false);
     table.timestamp('created_at').defaultTo(knex.fn.now());
-    table.timestamp('updated_at').defaultTo(knex.fn.now());
+    table
+      .timestamp('updated_at')
+      .defaultTo(knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
   });
 };
 

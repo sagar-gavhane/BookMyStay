@@ -350,7 +350,6 @@ app.put('/api/rooms/:id', async (req, res) => {
         amenities: req.body.amenities,
         price_per_night: req.body.price_per_night,
         is_available: req.body.is_available,
-        updated_at: new Date(),
       })
       .where({ room_id });
 
