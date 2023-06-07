@@ -1,4 +1,4 @@
-const handleZodError = (error) => {
+const handle_zod_error = (error) => {
   const result = {};
 
   error.issues.forEach((issue) => {
@@ -8,4 +8,4 @@ const handleZodError = (error) => {
   return result;
 };
 
-module.exports = handleZodError;
+module.exports = handle_zod_error;

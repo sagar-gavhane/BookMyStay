@@ -1,7 +1,5 @@
 const jwt = require('jsonwebtoken');
 
-const jwtSecretKey = '~&VV^;WhENo^"^Q';
-
 const verifyToken = (req, res, next) => {
   const token = req.headers['x-access-token'];
 
@@ -12,11 +10,11 @@ const verifyToken = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, jwtSecretKey);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
 
     req.auth = {
       user: {
-        id: decoded.user.id,
+        user_id: decoded.user.user_id,
         email: decoded.user.email,
       },
     };

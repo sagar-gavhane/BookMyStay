@@ -1,6 +1,6 @@
 const knex = require('../utils/knex');
 
-const getUserByKeyValue = async (key, value) => {
+const get_user_by_key_value = async (key, value) => {
   const [user] = await knex
     .select('*')
     .from('users')
@@ -10,11 +10,11 @@ const getUserByKeyValue = async (key, value) => {
   return user;
 };
 
-const getUserById = async (userId) => getUserByKeyValue('user_id', userId);
+const get_user_by_id = (userId) => get_user_by_key_value('user_id', userId);
 
-const getUserByEmail = async (email) => getUserByKeyValue('email', email);
+const get_user_by_email = (email) => get_user_by_key_value('email', email);
 
 module.exports = {
-  getUserById,
-  getUserByEmail,
+  get_user_by_id,
+  get_user_by_email,
 };
