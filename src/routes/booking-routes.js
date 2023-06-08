@@ -12,5 +12,10 @@ router.get(
   bookingController.get_booking_id,
 );
 router.post('/bookings', verifyToken, bookingController.post_booking);
+router.put(
+  '/bookings/:booking_id',
+  verifyToken,
+  bookingController.put_bookings,
+);
 
 module.exports = router;
